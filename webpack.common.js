@@ -5,12 +5,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.jsx'
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -35,7 +35,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /^((?!base64).)*(png|jpg)$/,
+        use: [
+          'file-loader'
+        ]
+      },
+      {
+        test: /\.base64.(png|jpg)$/,
         use: [
           'url-loader'
         ]
@@ -57,6 +63,6 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].[hash].bundle.js'
   },
 };
