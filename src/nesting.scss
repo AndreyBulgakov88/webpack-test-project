@@ -1,9 +1,16 @@
-  .container {
-    .paragraph {
-      color: yellow;
-      
-      &:hover {
-        color: blue;
-      }
+.container {
+  .paragraph {
+    color: yellow;
+
+    &:hover {
+      color: blue;
     }
+    
   }
+}
+
+.special_paragraph {
+  .special_container & {
+    background-color: red;
+  }
+}

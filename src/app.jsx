@@ -4,6 +4,7 @@ import variables from './variables.scss';
 import mixin from './mixin.scss';
 import MountainSvg from './mountain.svg';
 import FileJSON from './FileJSON.json';
+import classNames from 'classnames';
 
 class App extends Component {
 
@@ -16,6 +17,9 @@ class App extends Component {
         <p className={nesting.paragraph}>НЕ внутренний текст</p>
         <div className={nesting.container}>
           <p className={nesting.paragraph}>Внутренний текст</p>
+        </div>
+        <div className={nesting.special_container}>
+          <p className={nesting.special_paragraph}>Спец текст</p>
         </div>
         <div>
           <button className={mixin.button_green}>Green button</button>
