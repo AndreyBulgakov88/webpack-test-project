@@ -1,3 +1,5 @@
+@import "extend";
+
 @mixin buttons($bg-color) {
     background-color: $bg-color;
     
@@ -12,13 +14,16 @@
 }
 
 .button_green {
+    @extend %button-small;
     @include buttons(#00FF00);
 }
 
 .button_white {
+    @extend %button-small;
     @include buttons(#FFFFFF);
 }
 
 .button_red {
+    @extend %button-big;
     @include buttons(#FF0000);
 }
