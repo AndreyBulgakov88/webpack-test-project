@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import style from './app.scss';
+import nesting from './nesting.scss';
+import variables from './variables.scss';
 import MountainSvg from './mountain.svg';
 import FileJSON from './FileJSON.json';
 
 class App extends Component {
 
   render() {
-    console.log('1');
-      return (
+    return (
       <div>
-        <div className={style.hello}>
+        <div className={variables.hello}>
           Hello React!
         </div>    
-        <img className={style.image} src={require('./background.base64.jpg')} alt={FileJSON.name} />    
+        <p className={nesting.paragraph}>НЕ внутренний текст</p>
+        <div className={nesting.container}>
+          <p className={nesting.paragraph}>Внутренний текст</p>
+        </div>
+        <img className={variables.image} src={require('./background.base64.jpg')} alt={FileJSON.name} />    
         <MountainSvg />
       </div>)
     }

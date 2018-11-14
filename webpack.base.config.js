@@ -28,7 +28,10 @@ module.exports = {
               localIdentName: "[local]_[hash:base64]",
               sourceMap: true
             }
-          }
+          },
+          {
+            loader: "sass-loader"
+          }, 
         ]
       },
       {

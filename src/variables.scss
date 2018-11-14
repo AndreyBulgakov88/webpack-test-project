@@ -1,5 +1,7 @@
+$primary-color: #333;
+
 .hello {
-    color: red;
+    color: $primary-color;
     background: url('./background.jpg');
     width: 400px;
     height: 400px;
@@ -9,3 +11,4 @@
     width: 400px;
     height: 400px; 
   }
+  
