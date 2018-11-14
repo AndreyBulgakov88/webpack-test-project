@@ -1,0 +1,24 @@
+@mixin buttons($bg-color) {
+    background-color: $bg-color;
+    
+    &:hover {
+        background-color: darken($bg-color,10%);
+    }
+
+    &:active {
+        background-color: darken($bg-color,20%);
+        outline: 1px solid #666;
+    }
+}
+
+.button_green {
+    @include buttons(#00FF00);
+}
+
+.button_white {
+    @include buttons(#FFFFFF);
+}
+
+.button_red {
+    @include buttons(#FF0000);
+}
